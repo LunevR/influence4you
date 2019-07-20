@@ -17,4 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/influencers', 'InfluencerController@index')->name('influencers.index');
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::get('/influencers', 'InfluencerController@index')->name('influencers.index');
+    Route::get('/influencers/export', 'InfluencerController@export')->name('influencers.export');
+});
