@@ -30,7 +30,13 @@
                     @endif
                 </tbody>
             </table>
-            {{ $influencers->links() }}
+
+            <div style="float:left">
+                {{ $influencers->links() }}
+            </div>
+            <div style="float:right">
+                <a href="{{ route('influencers.export') }}" class="btn btn-primary">PDF export</a>
+            </div>
         </div>
     </div>
 </div>
