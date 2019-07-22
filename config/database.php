@@ -63,6 +63,21 @@ return [
             ]) : [],
         ],
 
+        'mysql_testing' => [
+            'driver'    => 'mysql',
+            'host'      => env('TESTING_DB_HOST', '127.0.0.1'),
+            'port'      => env('TESTING_DB_PORT', '3306'),
+            'database'  => env('TESTING_DB_DATABASE', 'forge'),
+            'username'  => env('TESTING_DB_USERNAME', 'forge'),
+            'password'  => env('TESTING_DB_PASSWORD', ''),
+            'charset'   => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+            'engine'    => null,
+            'timezone'  => '+00:00'
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),

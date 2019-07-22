@@ -13,11 +13,11 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Auth::routes();
 
-Route::group(['middleware' => ['auth', 'verified']], function () {
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/influencers', 'InfluencerController@index')->name('influencers.index');
     Route::get('/influencers/export', 'InfluencerController@export')->name('influencers.export');
 });

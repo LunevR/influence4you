@@ -24,8 +24,8 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
+      - "4430:443"
     volumes:
       - ./:/var/www
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
@@ -38,7 +38,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "3306:3306"
+      - "33060:3306"
     environment:
       MYSQL_DATABASE: influence4you
       MYSQL_ROOT_PASSWORD: secret

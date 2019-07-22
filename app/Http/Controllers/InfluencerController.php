@@ -3,19 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Influencer;
-use Illuminate\Http\Request;
 use PDF;
 
 class InfluencerController extends Controller
 {
-    private const PAGINATION_COUNT = 10;
-
     /**
      * Display a listing of the influencer.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
         $influencers = Influencer::paginate(self::PAGINATION_COUNT);
 

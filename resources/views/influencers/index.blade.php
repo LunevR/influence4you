@@ -16,7 +16,7 @@
                 <tbody>
                     @if(count($influencers) === 0)
                         <tr>
-                            <td colspan="4">No one influencer not found</td>
+                            <td colspan="4">No influencer has been found</td>
                         </tr>
                     @else
                         @foreach($influencers as $influencer)
@@ -31,10 +31,10 @@
                 </tbody>
             </table>
 
-            <div style="float:left">
+            <div class="float-left">
                 {{ $influencers->links() }}
             </div>
-            <div style="float:right">
+            <div class="float-right">
                 <a href="{{ route('influencers.export') }}" class="btn btn-primary">PDF export</a>
             </div>
         </div>

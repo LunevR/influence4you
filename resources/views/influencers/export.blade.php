@@ -14,7 +14,7 @@
         <tbody>
             @if(count($influencers) === 0)
                 <tr>
-                    <td colspan="4">No one influencer not found</td>
+                    <td colspan="4">No influencer has been found</td>
                 </tr>
             @else
                 @foreach($influencers as $influencer)

@@ -9,5 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
+    protected const PAGINATION_COUNT = 10;
+
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
